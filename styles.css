@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: -0.07em;
+    min-height: 100vh;
+}
+
+nav {
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hamburger {
+    cursor: pointer;
+    z-index: 100;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    min-height: 100vh;
+    padding-bottom: 10vh;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    text-align: left;
+    margin-left: 15%;
+    align-self: flex-start;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 3.5rem;
+    transition: opacity 0.3s;
+    line-height: 1;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.side-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: black;
+    border-left: 1px solid white;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.side-panel.open {
+    right: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.panel-content {
+    padding: 6rem 2rem 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.panel-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.panel-links a {
+    font-size: 1.5rem;
+}
+
+.footer {
+    font-weight: normal;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    text-align: center;
+}
